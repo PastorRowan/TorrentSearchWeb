@@ -1,0 +1,213 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TorrentSearchWeb</title>
+    <link href="materialize.min.css" rel="stylesheet"/>
+</head>
+<body
+    style="
+        display: flex;
+        justify-content: center;
+    "
+>
+    <div
+        style="
+            margin: 35px 40px;
+            width: 80%;
+        "
+    >
+        <h2>
+            TorrentSearchWeb
+        </h2>
+        <div
+            class="input-field col s6"
+        >
+            <input
+                id="search-bar"
+                type="text"
+            />
+            <label
+                for="search-bar"
+            >
+                Search
+            </label>
+        </div>
+        <div
+            style="
+                width: 100%;
+                height: 12px;
+            "
+        ></div>
+        <table
+            class="striped"
+        >
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Size</th>
+                    <th>Seeders</th>
+                    <th>Leechers</th>
+                </tr>
+            </thead>
+            <tbody id="results-table-body">
+                <tr>
+                    <td>Bunda</td>
+                    <td>100</td>
+                    <td>1</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>Bunda</td>
+                    <td>100</td>
+                    <td>1</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>Bunda</td>
+                    <td>100</td>
+                    <td>1</td>
+                    <td>2</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script
+        async
+    >
+
+        const searchBar = document.getElementById("search-bar");
+        if (!searchBar) {
+            const errorMsg = "Error: failed to find search bar";
+            alert(errorMsg);
+            throw new Error(errorMsg);
+        };
+
+        const resultsTableBody = document.getElementById("results-table-body");
+        if (!resultsTableBody) {
+            const errorMsg = "Error: failed to find results bar";
+            alert(errorMsg);
+            throw new Error(errorMsg);
+        };
+
+        const trackers = [];
+
+        async function getTrackers() {
+            try {
+                const url = "https://raw.githubusercontent.com/ngosang/trackerslist/master/trackers_best.txt";
+                const response = await fetch(
+                    url
+                );
+                if (!response.ok) {
+                    console.error("Error: failed to get latest tracker list from ");
+                    return;
+                };
+                const result = await response.text();
+                lines = result.split('\n');
+                for (const line in lines) {
+                    if () {
+
+                    };
+                };
+            } catch (error) {
+                
+            }
+        };
+
+        getTrackers();
+
+        let isSearching = false;
+
+        searchBar.addEventListener("keydown", async (event) => {
+            if (
+                event.key == "Enter" &&
+                trackers.length >= 1 &&
+                !isSearching
+            ) {
+                isSearching = true;
+                console.log(`Pressed enter on: ${searchBar.id}`);
+                const allSearchResults = [];
+                const requests = [
+                    {
+                        url: `https://apibay.org/q.php?q=${query}`,
+                        options: {
+                            method: "GET",
+                            headers: {
+                                "Accept": "application/json"
+                            }
+                        },
+                        parseResponse: function(response) {
+                            const results = response.json();
+                            if (typeof results != "array") {
+                                console.error("Error: the pirate bay results was not an array");
+                                return [];
+                            };
+                            const searchResults = [];
+                            results.forEach((result) => {
+                                if (
+                                    typeof result?.name == "string" &&
+                                    typeof result?.info_hash == "string" &&
+                                    typeof result?.size == "string" &&
+                                    typeof result?.leechers == "string" &&
+                                    typeof seeders?.seeders == "string"
+                                ) {
+                                    searchResults.push({
+                                        name: result.name,
+                                        magnetUrl: result.info_hash,
+                                        size: result.size,
+                                        leechers: result.leechers,
+                                        seeders: result.seeders
+                                    });
+                                };
+                            });
+                            return searchResults;
+                        }
+                    }
+                ];
+                const fetchPromises = requests.map((request) => {
+                    return fetch(
+                        request.url,
+                        request.options
+                    );
+                });
+                await Promise.all(fetchPromises);
+                for (let i = 0; i < requests.length; ++i) {
+                    request = requests[i];
+                    response = fetchPromises[i];
+                    if (!response.ok) {
+                        console.log(`Failed to fetch torrent search results\nurl: '${request.url}'\nresponse status: '${response.status}'`);
+                        continue;
+                    };
+                    const searchResults = request.parseResponse(response);
+                    allSearchResults.push(searchResults);
+                };
+                resultsTableBody.replaceChildren();
+                allSearchResults.forEach((searchResult) => {
+
+                    const row = resultsTableBody.insertRow();
+
+                    const nameCell = row.insertCell();
+                    nameCell.textContent = searchResult.name;
+
+                    const sizeCell = row.insertCell();
+                    sizeCell.textContent = searchResult.size;
+
+                    const seedersCell = row.insertCell();
+                    seedersCell.textContent = searchResult.seeders;
+
+                    const leechersCell = row.insertCell();
+                    leechersCell.textContent = searchResult.leechers;
+
+                });
+                isSearching = false;
+            };
+        });
+
+    </script>
+
+</body>
+
+</html>
