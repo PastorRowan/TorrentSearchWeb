@@ -5,7 +5,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TorrentSearchWeb</title>
-    <link href="materialize.min.css" rel="stylesheet"/>
+    <style>
+
+        /*!
+         * Materialize v2.2.2 (https://materializeweb.com)
+         * Copyright 2014-2025 Materialize
+         * MIT License (https://raw.githubusercontent.com/materializecss/materialize/master/LICENSE)
+         * This is a compiled version of materialize.min.css css v.2.2
+         */
+        :root{--md-source: #006495;--md-ref-palette-primary0: #000000;--md-ref-palette-primary10: #001e30;--md-ref-palette-primary20: #003450;--md-ref-palette-primary25: #003f60;--md-ref-palette-primary30: #004b71;--md-ref-palette-primary35: #005783;--md-ref-palette-primary40: #006495;--md-ref-palette-primary50: #0f7eb8;--md-ref-palette-primary60: #3d98d4;--md-ref-palette-primary70: #5db3f0;--md-ref-palette-primary80: #8fcdff;--md-ref-palette-primary90: #cbe6ff;--md-ref-palette-primary95: #e6f2ff;--md-ref-palette-primary98: #f7f9ff;--md-ref-palette-primary99: #fcfcff;--md-ref-palette-primary100: #ffffff;--md-ref-palette-secondary0: #000000;--md-ref-palette-secondary10: #0d1d29;--md-ref-palette-secondary20: #22323f;--md-ref-palette-secondary25: #2d3d4b;--md-ref-palette-secondary30: #394856;--md-ref-palette-secondary35: #445462;--md-ref-palette-secondary40: #50606f;--md-ref-palette-secondary50: #697988;--md-ref-palette-secondary60: #8293a2;--md-ref-palette-secondary70: #9dadbd;--md-ref-palette-secondary80: #b8c8d9;--md-ref-palette-secondary90: #d4e4f6;--md-ref-palette-secondary95: #e6f2ff;--md-ref-palette-secondary98: #f7f9ff;--md-ref-palette-secondary99: #fcfcff;--md-ref-palette-secondary100: #ffffff;--md-ref-palette-tertiary0: #000000;--md-ref-palette-tertiary10: #211634;--md-ref-palette-tertiary20: #362b4a;--md-ref-palette-tertiary25: #423656;--md-ref-palette-tertiary30: #4d4162;--md-ref-palette-tertiary35: #594c6e;--md-ref-palette-tertiary40: #66587b;--md-ref-palette-tertiary50: #7f7195;--md-ref-palette-tertiary60: #998ab0;--md-ref-palette-tertiary70: #b4a4cb;--md-ref-palette-tertiary80: #d0bfe7;--md-ref-palette-tertiary90: #ecdcff;--md-ref-palette-tertiary95: #f7edff;--md-ref-palette-tertiary98: #fef7ff;--md-ref-palette-tertiary99: #fffbff;--md-ref-palette-tertiary100: #ffffff;--md-ref-palette-neutral0: #000000;--md-ref-palette-neutral10: #1a1c1e;--md-ref-palette-neutral20: #2e3133;--md-ref-palette-neutral25: #3a3c3e;--md-ref-palette-neutral30: #454749;--md-ref-palette-neutral35: #515255;--md-ref-palette-neutral40: #5d5e61;--md-ref-palette-neutral50: #76777a;--md-ref-palette-neutral60: #8f9194;--md-ref-palette-neutral70: #aaabae;--md-ref-palette-neutral80: #c6c6c9;--md-ref-palette-neutral90: #e2e2e5;--md-ref-palette-neutral95: #f0f0f3;--md-ref-palette-neutral98: #f9f9fc;--md-ref-palette-neutral99: #fcfcff;--md-ref-palette-neutral100: #ffffff;--md-ref-palette-neutral-variant0: #000000;--md-ref-palette-neutral-variant10: #161c22;--md-ref-palette-neutral-variant20: #2b3137;--md-ref-palette-neutral-variant25: #363c42;--md-ref-palette-neutral-variant30: #41474d;--md-ref-palette-neutral-variant35: #4d5359;--md-ref-palette-neutral-variant40: #595f65;--md-ref-palette-neutral-variant50: #72787e;--md-ref-palette-neutral-variant60: #8b9198;--md-ref-palette-neutral-variant70: #a6acb3;--md-ref-palette-neutral-variant80: #c1c7ce;--md-ref-palette-neutral-variant90: #dee3ea;--md-ref-palette-neutral-variant95: #ecf1f9;--md-ref-palette-neutral-variant98: #f7f9ff;--md-ref-palette-neutral-variant99: #fcfcff;--md-ref-palette-neutral-variant100: #ffffff;--md-ref-palette-error0: #000000;--md-ref-palette-error10: #410002;--md-ref-palette-error20: #690005;--md-ref-palette-error25: #7e0007;--md-ref-palette-error30: #93000a;--md-ref-palette-error35: #a80710;--md-ref-palette-error40: #ba1a1a;--md-ref-palette-error50: #de3730;--md-ref-palette-error60: #ff5449;--md-ref-palette-error70: #ff897d;--md-ref-palette-error80: #ffb4ab;--md-ref-palette-error90: #ffdad6;--md-ref-palette-error95: #ffedea;--md-ref-palette-error98: #fff8f7;--md-ref-palette-error99: #fffbff;--md-ref-palette-error100: #ffffff;--md-sys-color-primary-light: #006495;--md-sys-color-on-primary-light: #ffffff;--md-sys-color-primary-container-light: #cbe6ff;--md-sys-color-on-primary-container-light: #001e30;--md-sys-color-secondary-light: #50606f;--md-sys-color-on-secondary-light: #ffffff;--md-sys-color-secondary-container-light: #d4e4f6;--md-sys-color-on-secondary-container-light: #0d1d29;--md-sys-color-tertiary-light: #66587b;--md-sys-color-on-tertiary-light: #ffffff;--md-sys-color-tertiary-container-light: #ecdcff;--md-sys-color-on-tertiary-container-light: #211634;--md-sys-color-error-light: #ba1a1a;--md-sys-color-error-container-light: #ffdad6;--md-sys-color-on-error-light: #ffffff;--md-sys-color-on-error-container-light: #410002;--md-sys-color-background-light: #fcfcff;--md-sys-color-on-background-light: #1a1c1e;--md-sys-color-surface-light: #fcfcff;--md-sys-color-on-surface-light: #1a1c1e;--md-sys-color-surface-variant-light: #dee3ea;--md-sys-color-on-surface-variant-light: #41474d;--md-sys-color-outline-light: #72787e;--md-sys-color-inverse-on-surface-light: #f0f0f3;--md-sys-color-inverse-surface-light: #2e3133;--md-sys-color-inverse-primary-light: #8fcdff;--md-sys-color-shadow-light: #000000;--md-sys-color-surface-tint-light: #006495;--md-sys-color-outline-variant-light: #c1c7ce;--md-sys-color-scrim-light: #000000;--md-sys-color-primary-dark: #8fcdff;--md-sys-color-on-primary-dark: #003450;--md-sys-color-primary-container-dark: #004b71;--md-sys-color-on-primary-container-dark: #cbe6ff;--md-sys-color-secondary-dark: #b8c8d9;--md-sys-color-on-secondary-dark: #22323f;--md-sys-color-secondary-container-dark: #394856;--md-sys-color-on-secondary-container-dark: #d4e4f6;--md-sys-color-tertiary-dark: #d0bfe7;--md-sys-color-on-tertiary-dark: #362b4a;--md-sys-color-tertiary-container-dark: #4d4162;--md-sys-color-on-tertiary-container-dark: #ecdcff;--md-sys-color-error-dark: #ffb4ab;--md-sys-color-error-container-dark: #93000a;--md-sys-color-on-error-dark: #690005;--md-sys-color-on-error-container-dark: #ffdad6;--md-sys-color-background-dark: #1a1c1e;--md-sys-color-on-background-dark: #e2e2e5;--md-sys-color-surface-dark: #1a1c1e;--md-sys-color-on-surface-dark: #e2e2e5;--md-sys-color-surface-variant-dark: #41474d;--md-sys-color-on-surface-variant-dark: #c1c7ce;--md-sys-color-outline-dark: #8b9198;--md-sys-color-inverse-on-surface-dark: #1a1c1e;--md-sys-color-inverse-surface-dark: #e2e2e5;--md-sys-color-inverse-primary-dark: #006495;--md-sys-color-shadow-dark: #000000;--md-sys-color-surface-tint-dark: #8fcdff;--md-sys-color-outline-variant-dark: #41474d;--md-sys-color-scrim-dark: #000000;--md-sys-typescale-display-large-font-family-name: Roboto;--md-sys-typescale-display-large-font-family-style: Regular;--md-sys-typescale-display-large-font-weight: 400px;--md-sys-typescale-display-large-font-size: 57px;--md-sys-typescale-display-large-line-height: 64px;--md-sys-typescale-display-large-letter-spacing: -0.25px;--md-sys-typescale-display-medium-font-family-name: Roboto;--md-sys-typescale-display-medium-font-family-style: Regular;--md-sys-typescale-display-medium-font-weight: 400px;--md-sys-typescale-display-medium-font-size: 45px;--md-sys-typescale-display-medium-line-height: 52px;--md-sys-typescale-display-medium-letter-spacing: 0px;--md-sys-typescale-display-small-font-family-name: Roboto;--md-sys-typescale-display-small-font-family-style: Regular;--md-sys-typescale-display-small-font-weight: 400px;--md-sys-typescale-display-small-font-size: 36px;--md-sys-typescale-display-small-line-height: 44px;--md-sys-typescale-display-small-letter-spacing: 0px;--md-sys-typescale-headline-large-font-family-name: Roboto;--md-sys-typescale-headline-large-font-family-style: Regular;--md-sys-typescale-headline-large-font-weight: 400px;--md-sys-typescale-headline-large-font-size: 32px;--md-sys-typescale-headline-large-line-height: 40px;--md-sys-typescale-headline-large-letter-spacing: 0px;--md-sys-typescale-headline-medium-font-family-name: Roboto;--md-sys-typescale-headline-medium-font-family-style: Regular;--md-sys-typescale-headline-medium-font-weight: 400px;--md-sys-typescale-headline-medium-font-size: 28px;--md-sys-typescale-headline-medium-line-height: 36px;--md-sys-typescale-headline-medium-letter-spacing: 0px;--md-sys-typescale-headline-small-font-family-name: Roboto;--md-sys-typescale-headline-small-font-family-style: Regular;--md-sys-typescale-headline-small-font-weight: 400px;--md-sys-typescale-headline-small-font-size: 24px;--md-sys-typescale-headline-small-line-height: 32px;--md-sys-typescale-headline-small-letter-spacing: 0px;--md-sys-typescale-body-large-font-family-name: Roboto;--md-sys-typescale-body-large-font-family-style: Regular;--md-sys-typescale-body-large-font-weight: 400px;--md-sys-typescale-body-large-font-size: 16px;--md-sys-typescale-body-large-line-height: 24px;--md-sys-typescale-body-large-letter-spacing: 0.50px;--md-sys-typescale-body-medium-font-family-name: Roboto;--md-sys-typescale-body-medium-font-family-style: Regular;--md-sys-typescale-body-medium-font-weight: 400px;--md-sys-typescale-body-medium-font-size: 14px;--md-sys-typescale-body-medium-line-height: 20px;--md-sys-typescale-body-medium-letter-spacing: 0.25px;--md-sys-typescale-body-small-font-family-name: Roboto;--md-sys-typescale-body-small-font-family-style: Regular;--md-sys-typescale-body-small-font-weight: 400px;--md-sys-typescale-body-small-font-size: 12px;--md-sys-typescale-body-small-line-height: 16px;--md-sys-typescale-body-small-letter-spacing: 0.40px;--md-sys-typescale-label-large-font-family-name: Roboto;--md-sys-typescale-label-large-font-family-style: Medium;--md-sys-typescale-label-large-font-weight: 500px;--md-sys-typescale-label-large-font-size: 14px;--md-sys-typescale-label-large-line-height: 20px;--md-sys-typescale-label-large-letter-spacing: 0.10px;--md-sys-typescale-label-medium-font-family-name: Roboto;--md-sys-typescale-label-medium-font-family-style: Medium;--md-sys-typescale-label-medium-font-weight: 500px;--md-sys-typescale-label-medium-font-size: 12px;--md-sys-typescale-label-medium-line-height: 16px;--md-sys-typescale-label-medium-letter-spacing: 0.50px;--md-sys-typescale-label-small-font-family-name: Roboto;--md-sys-typescale-label-small-font-family-style: Medium;--md-sys-typescale-label-small-font-weight: 500px;--md-sys-typescale-label-small-font-size: 11px;--md-sys-typescale-label-small-line-height: 16px;--md-sys-typescale-label-small-letter-spacing: 0.50px;--md-sys-typescale-title-large-font-family-name: Roboto;--md-sys-typescale-title-large-font-family-style: Regular;--md-sys-typescale-title-large-font-weight: 400px;--md-sys-typescale-title-large-font-size: 22px;--md-sys-typescale-title-large-line-height: 28px;--md-sys-typescale-title-large-letter-spacing: 0px;--md-sys-typescale-title-medium-font-family-name: Roboto;--md-sys-typescale-title-medium-font-family-style: Medium;--md-sys-typescale-title-medium-font-weight: 500px;--md-sys-typescale-title-medium-font-size: 16px;--md-sys-typescale-title-medium-line-height: 24px;--md-sys-typescale-title-medium-letter-spacing: 0.15px;--md-sys-typescale-title-small-font-family-name: Roboto;--md-sys-typescale-title-small-font-family-style: Medium;--md-sys-typescale-title-small-font-weight: 500px;--md-sys-typescale-title-small-font-size: 14px;--md-sys-typescale-title-small-line-height: 20px;--md-sys-typescale-title-small-letter-spacing: 0.10px}:root{color-scheme:light;--md-sys-color-primary: var(--md-sys-color-primary-light);--md-sys-color-on-primary: var(--md-sys-color-on-primary-light);--md-sys-color-primary-container: var(--md-sys-color-primary-container-light);--md-sys-color-on-primary-container: var(--md-sys-color-on-primary-container-light);--md-sys-color-secondary: var(--md-sys-color-secondary-light);--md-sys-color-on-secondary: var(--md-sys-color-on-secondary-light);--md-sys-color-secondary-container: var(--md-sys-color-secondary-container-light);--md-sys-color-on-secondary-container: var(--md-sys-color-on-secondary-container-light);--md-sys-color-tertiary: var(--md-sys-color-tertiary-light);--md-sys-color-on-tertiary: var(--md-sys-color-on-tertiary-light);--md-sys-color-tertiary-container: var(--md-sys-color-tertiary-container-light);--md-sys-color-on-tertiary-container: var(--md-sys-color-on-tertiary-container-light);--md-sys-color-error: var(--md-sys-color-error-light);--md-sys-color-on-error: var(--md-sys-color-on-error-light);--md-sys-color-error-container: var(--md-sys-color-error-container-light);--md-sys-color-on-error-container: var(--md-sys-color-on-error-container-light);--md-sys-color-outline: var(--md-sys-color-outline-light);--md-sys-color-background: var(--md-sys-color-background-light);--md-sys-color-on-background: var(--md-sys-color-on-background-light);--md-sys-color-surface: var(--md-sys-color-surface-light);--md-sys-color-on-surface: var(--md-sys-color-on-surface-light);--md-sys-color-surface-variant: var(--md-sys-color-surface-variant-light);--md-sys-color-on-surface-variant: var(--md-sys-color-on-surface-variant-light);--md-sys-color-inverse-surface: var(--md-sys-color-inverse-surface-light);--md-sys-color-inverse-on-surface: var(--md-sys-color-inverse-on-surface-light);--md-sys-color-inverse-primary: var(--md-sys-color-inverse-primary-light);--md-sys-color-shadow: var(--md-sys-color-shadow-light);--md-sys-color-surface-tint: var(--md-sys-color-surface-tint-light);--md-sys-color-outline-variant: var(--md-sys-color-outline-variant-light);--md-sys-color-scrim: var(--md-sys-color-scrim-light)}@media(prefers-color-scheme: dark){:root{color-scheme:dark;--md-sys-color-primary: var(--md-sys-color-primary-dark);--md-sys-color-on-primary: var(--md-sys-color-on-primary-dark);--md-sys-color-primary-container: var(--md-sys-color-primary-container-dark);--md-sys-color-on-primary-container: var(--md-sys-color-on-primary-container-dark);--md-sys-color-secondary: var(--md-sys-color-secondary-dark);--md-sys-color-on-secondary: var(--md-sys-color-on-secondary-dark);--md-sys-color-secondary-container: var(--md-sys-color-secondary-container-dark);--md-sys-color-on-secondary-container: var(--md-sys-color-on-secondary-container-dark);--md-sys-color-tertiary: var(--md-sys-color-tertiary-dark);--md-sys-color-on-tertiary: var(--md-sys-color-on-tertiary-dark);--md-sys-color-tertiary-container: var(--md-sys-color-tertiary-container-dark);--md-sys-color-on-tertiary-container: var(--md-sys-color-on-tertiary-container-dark);--md-sys-color-error: var(--md-sys-color-error-dark);--md-sys-color-on-error: var(--md-sys-color-on-error-dark);--md-sys-color-error-container: var(--md-sys-color-error-container-dark);--md-sys-color-on-error-container: var(--md-sys-color-on-error-container-dark);--md-sys-color-outline: var(--md-sys-color-outline-dark);--md-sys-color-background: var(--md-sys-color-background-dark);--md-sys-color-on-background: var(--md-sys-color-on-background-dark);--md-sys-color-surface: var(--md-sys-color-surface-dark);--md-sys-color-on-surface: var(--md-sys-color-on-surface-dark);--md-sys-color-surface-variant: var(--md-sys-color-surface-variant-dark);--md-sys-color-on-surface-variant: var(--md-sys-color-on-surface-variant-dark);--md-sys-color-inverse-surface: var(--md-sys-color-inverse-surface-dark);--md-sys-color-inverse-on-surface: var(--md-sys-color-inverse-on-surface-dark);--md-sys-color-inverse-primary: var(--md-sys-color-inverse-primary-dark);--md-sys-color-shadow: var(--md-sys-color-shadow-dark);--md-sys-color-surface-tint: var(--md-sys-color-surface-tint-dark);--md-sys-color-outline-variant: var(--md-sys-color-outline-variant-dark);--md-sys-color-scrim: var(--md-sys-color-scrim-dark)}}.error{background-color:var(--md-sys-color-error)}html{-webkit-box-sizing:border-box;box-sizing:border-box}*,*:before,*:after{-webkit-box-sizing:inherit;box-sizing:inherit}body{background-color:var(--md-sys-color-background);color:var(--md-sys-color-on-background)}button,input,select{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif}a{color:colorFunc("light-blue", "darken-1");text-decoration:none;-webkit-tap-highlight-color:rgba(0,0,0,0)}.btn-floating:disabled,.btn-large:disabled,.text.btn-large{-webkit-box-shadow:none !important;box-shadow:none !important}.btn-floating{-webkit-box-shadow:0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.12),0 1px 5px 0 rgba(0,0,0,.2);box-shadow:0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.12),0 1px 5px 0 rgba(0,0,0,.2)}.btn-floating:hover,.btn-floating:focus{-webkit-box-shadow:0 3px 3px 0 rgba(0,0,0,.14),0 1px 7px 0 rgba(0,0,0,.12),0 3px 1px -1px rgba(0,0,0,.2);box-shadow:0 3px 3px 0 rgba(0,0,0,.14),0 1px 7px 0 rgba(0,0,0,.12),0 3px 1px -1px rgba(0,0,0,.2)}table,th,td{border:none}table{width:100%;display:table;border-collapse:collapse;border-spacing:0}table.striped tr{border-bottom:none}table.striped tbody>tr:nth-child(odd){background-color:rgba(0,0,0,.08)}table thead{color:var(--md-sys-color-on-surface-variant)}tr{border-bottom:1px solid var(--md-sys-color-outline-variant)}td,th{padding:15px 5px;display:table-cell;text-align:left;vertical-align:middle;border-radius:0}.center{text-align:center}.right{float:right !important}/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}a{background-color:rgba(0,0,0,0)}button,input,select{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}button,[type=button]{-webkit-appearance:button}button::-moz-focus-inner,[type=button]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type=button]:-moz-focusring{outline:1px dotted ButtonText}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}[hidden]{display:none}a{text-decoration:none}html{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;font-weight:normal;color:var(--md-sys-color-on-background)}@media only screen and (min-width: 0){html{font-size:14px}}@media only screen and (min-width: 993px){html{font-size:14.5px}}@media only screen and (min-width: 1201px){html{font-size:15px}}h2{font-weight:400;line-height:1.3}h2 a{font-weight:inherit}h2{font-size:3.56rem;line-height:110%;margin:2.3733333333rem 0 1.424rem 0}:root{--btn-height: 40px;--btn-font-size-icon: 16px;--btn-padding: 24px;--btn-padding-icon: 16px;--btn-gap-icon: 8px;--btn-border-radius: 4px;--btn-font-size: 14px}.btn-large,.btn-floating{height:var(--btn-height);border-radius:var(--btn-border-radius);padding-left:var(--btn-padding);padding-right:var(--btn-padding);font-size:var(--btn-font-size);font-weight:500;text-decoration:none;display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;border:none;cursor:pointer;-webkit-tap-highlight-color:rgba(0,0,0,0);white-space:nowrap;outline:0;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-transition:background-color .2s ease-out;transition:background-color .2s ease-out}.btn-floating:focus,.btn-large:focus{background-color:var(--md-sys-color-primary-container)}.text.btn-large{color:var(--md-sys-color-primary);background-color:rgba(0,0,0,0)}.text.btn-large:hover,.text.btn-large:focus{color:var(--md-sys-color-primary)}.text.btn-large:hover{background-color:color-mix(in srgb, var(--md-sys-color-primary) 16%, transparent)}.text.btn-large:focus{background-color:color-mix(in srgb, transparent, var(--md-sys-color-primary) 20%)}.text.btn-large:focus-visible{outline:3px solid var(--md-sys-color-secondary);outline-offset:2px}.btn-floating:disabled,.btn-large:disabled{color:color-mix(in srgb, transparent, var(--md-sys-color-on-surface) 76%);background-color:color-mix(in srgb, transparent, var(--md-sys-color-on-surface) 24%);pointer-events:none;-webkit-box-shadow:none;box-shadow:none;cursor:default}.btn-floating{width:40px;height:40px;color:var(--md-sys-color-on-primary-container);background-color:var(--md-sys-color-primary-container);border-radius:16px;padding:0;display:grid;grid-auto-flow:column;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;position:relative;overflow:hidden;z-index:1;-webkit-transition:background-color .3s;transition:background-color .3s;cursor:pointer;vertical-align:middle}.btn-floating:hover{background-color:color-mix(in srgb, var(--md-sys-color-primary-container), var(--md-sys-color-on-primary-container) 16%)}.btn-floating:focus{background-color:var(--md-ref-palette-secondary80)}.btn-floating:before{border-radius:0}.btn-floating.btn-large{width:56px;height:56px;padding:0}button.btn-floating{border:none}.btn-large{height:calc(1.5*var(--btn-height));font-size:18px;padding:0 28px}:root{--bagde-height: 22px}body{--gap-size: 1.5rem}.row{display:grid;grid-template-columns:repeat(12, 1fr);gap:var(--gap-size)}.row .s6{grid-column:auto/span 6}:root{--navbar-height: 64px;--navbar-height-mobile: 56px}::-webkit-input-placeholder{color:var(--md-sys-color-on-surface-variant)}::-moz-placeholder{color:var(--md-sys-color-on-surface-variant)}::-ms-input-placeholder{color:var(--md-sys-color-on-surface-variant)}::placeholder{color:var(--md-sys-color-on-surface-variant)}input:not([type]):not(.browser-default),input[type=text]:not(.browser-default),input[type=url]:not(.browser-default),input[type=search]:not(.browser-default){outline:none;color:var(--md-sys-color-on-background);width:100%;font-size:16px;height:56px;background-color:rgba(0,0,0,0)}.input-field{--input-color: var(--md-sys-color-primary);position:relative;clear:both}.input-field input{-webkit-box-sizing:border-box;box-sizing:border-box;padding:0 16px;padding-top:20px;border:none;border-radius:4px;border-bottom:1px solid var(--md-sys-color-on-surface-variant);border-bottom-left-radius:0;border-bottom-right-radius:0}.input-field input:focus:not([readonly]){border-bottom:2px solid var(--input-color);padding-top:21px}.input-field input:disabled{color:rgba(var(--md_sys_color_on-surface), 0.38);border-color:rgba(var(--md_sys_color_on-surface), 0.12);background-color:rgba(var(--md_sys_color_on-surface), 0.04)}.input-field input:focus:not([readonly])+label{color:var(--input-color)}.input-field input:not(:-moz-placeholder-shown)+label{transform:scale(0.75);top:8px}.input-field input:not(:-ms-input-placeholder)+label{transform:scale(0.75);top:8px}.input-field input:focus:not([readonly])+label,.input-field input:not([placeholder=" "])+label,.input-field input:not(:placeholder-shown)+label{-webkit-transform:scale(0.75);transform:scale(0.75);top:8px}.input-field input:disabled+label{color:rgba(var(--md_sys_color_on-surface), 0.38)}.input-field input::-webkit-input-placeholder{-webkit-user-select:none;user-select:none}.input-field input::-moz-placeholder{-moz-user-select:none;user-select:none}.input-field input:-ms-input-placeholder{-ms-user-select:none;user-select:none}.input-field input::-ms-input-placeholder{-ms-user-select:none;user-select:none}.input-field input::placeholder{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.input-field>label{color:var(--md-sys-color-on-surface-variant);-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;font-size:16px;position:absolute;left:16px;top:16px;cursor:text;-webkit-transform-origin:top left;transform-origin:top left;-webkit-transition:left .2s ease-out,top .2s ease-out,-webkit-transform .2s ease-out;transition:left .2s ease-out,top .2s ease-out,-webkit-transform .2s ease-out;transition:left .2s ease-out,top .2s ease-out,transform .2s ease-out;transition:left .2s ease-out,top .2s ease-out,transform .2s ease-out,-webkit-transform .2s ease-out}.input-field.error input{border-color:var(--md-sys-color-error)}.input-field.error input:focus:not([readonly]){border-color:var(--md-sys-color-error)}.input-field.error input:focus:not([readonly])+label{color:var(--md-sys-color-error)}.input-field.error label{color:var(--md-sys-color-error)}select{background-color:var(--md-sys-color-surface);width:100%;padding:5px;border:1px solid var(--md-sys-color-outline-variant);border-radius:2px;height:3rem}select:disabled{color:var(--md-sys-color-on-surface)}select:focus{outline:1px solid var(--md-ref-palette-primary80)}label{font-size:.8rem;color:var(--md-sys-color-on-surface-variant)}@-webkit-keyframes indeterminate{0%{left:-35%;right:100%}60%{left:100%;right:-90%}100%{left:100%;right:-90%}}@keyframes indeterminate{0%{left:-35%;right:100%}60%{left:100%;right:-90%}100%{left:100%;right:-90%}}@-webkit-keyframes indeterminate-short{0%{left:-200%;right:100%}60%{left:107%;right:-8%}100%{left:107%;right:-8%}}@keyframes indeterminate-short{0%{left:-200%;right:100%}60%{left:107%;right:-8%}100%{left:107%;right:-8%}}@-webkit-keyframes container-rotate{to{-webkit-transform:rotate(360deg)}}@keyframes container-rotate{to{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}@-webkit-keyframes fill-unfill-rotate{12.5%{-webkit-transform:rotate(135deg)}25%{-webkit-transform:rotate(270deg)}37.5%{-webkit-transform:rotate(405deg)}50%{-webkit-transform:rotate(540deg)}62.5%{-webkit-transform:rotate(675deg)}75%{-webkit-transform:rotate(810deg)}87.5%{-webkit-transform:rotate(945deg)}to{-webkit-transform:rotate(1080deg)}}@keyframes fill-unfill-rotate{12.5%{-webkit-transform:rotate(135deg);transform:rotate(135deg)}25%{-webkit-transform:rotate(270deg);transform:rotate(270deg)}37.5%{-webkit-transform:rotate(405deg);transform:rotate(405deg)}50%{-webkit-transform:rotate(540deg);transform:rotate(540deg)}62.5%{-webkit-transform:rotate(675deg);transform:rotate(675deg)}75%{-webkit-transform:rotate(810deg);transform:rotate(810deg)}87.5%{-webkit-transform:rotate(945deg);transform:rotate(945deg)}to{-webkit-transform:rotate(1080deg);transform:rotate(1080deg)}}@-webkit-keyframes blue-fade-in-out{from{opacity:1}25%{opacity:1}26%{opacity:0}89%{opacity:0}90%{opacity:1}100%{opacity:1}}@keyframes blue-fade-in-out{from{opacity:1}25%{opacity:1}26%{opacity:0}89%{opacity:0}90%{opacity:1}100%{opacity:1}}@-webkit-keyframes red-fade-in-out{from{opacity:0}15%{opacity:0}25%{opacity:1}50%{opacity:1}51%{opacity:0}}@keyframes red-fade-in-out{from{opacity:0}15%{opacity:0}25%{opacity:1}50%{opacity:1}51%{opacity:0}}@-webkit-keyframes yellow-fade-in-out{from{opacity:0}40%{opacity:0}50%{opacity:1}75%{opacity:1}76%{opacity:0}}@keyframes yellow-fade-in-out{from{opacity:0}40%{opacity:0}50%{opacity:1}75%{opacity:1}76%{opacity:0}}@-webkit-keyframes green-fade-in-out{from{opacity:0}65%{opacity:0}75%{opacity:1}90%{opacity:1}100%{opacity:0}}@keyframes green-fade-in-out{from{opacity:0}65%{opacity:0}75%{opacity:1}90%{opacity:1}100%{opacity:0}}@-webkit-keyframes left-spin{from{-webkit-transform:rotate(130deg)}50%{-webkit-transform:rotate(-5deg)}to{-webkit-transform:rotate(130deg)}}@keyframes left-spin{from{-webkit-transform:rotate(130deg);transform:rotate(130deg)}50%{-webkit-transform:rotate(-5deg);transform:rotate(-5deg)}to{-webkit-transform:rotate(130deg);transform:rotate(130deg)}}@-webkit-keyframes right-spin{from{-webkit-transform:rotate(-130deg)}50%{-webkit-transform:rotate(5deg)}to{-webkit-transform:rotate(-130deg)}}@keyframes right-spin{from{-webkit-transform:rotate(-130deg);transform:rotate(-130deg)}50%{-webkit-transform:rotate(5deg);transform:rotate(5deg)}to{-webkit-transform:rotate(-130deg);transform:rotate(-130deg)}}@-webkit-keyframes fade-out{from{opacity:1}to{opacity:0}}@keyframes fade-out{from{opacity:1}to{opacity:0}}@-webkit-keyframes pulse-animation{0%{opacity:1;-webkit-transform:scale(1);transform:scale(1)}50%{opacity:0;-webkit-transform:scale(1.5);transform:scale(1.5)}100%{opacity:0;-webkit-transform:scale(1.5);transform:scale(1.5)}}@keyframes pulse-animation{0%{opacity:1;-webkit-transform:scale(1);transform:scale(1)}50%{opacity:0;-webkit-transform:scale(1.5);transform:scale(1.5)}100%{opacity:0;-webkit-transform:scale(1.5);transform:scale(1.5)}}
+
+        #results-table-body tr {
+            cursor: pointer;
+            transition: background-color 0.15s ease;
+        }
+        #results-table-body tr:hover {
+            background-color: #bbdefb;
+        }
+        #results-table-body tr.selected {
+            background-color: #64b5f6;
+        }
+        #results-table-body tr.selected:hover {
+            background-color: #42a5f5;
+        }
+
+        #download-button {
+            position: fixed;
+            transition: background-color 0.25s;
+            display: flex;
+            justify-content: center;
+            bottom: 20px;
+            right: 20px;
+            background-color: #2196f3;
+        }
+        #download-button:hover {
+            background-color: #1976d2;
+        }
+        #download-button:active {
+            background-color: #1565c0;
+        }
+
+    </style>
 </head>
 <body
     style="
@@ -54,30 +94,149 @@
             </thead>
             <tbody id="results-table-body">
                 <tr>
-                    <td>Bunda</td>
-                    <td>100</td>
-                    <td>1</td>
-                    <td>2</td>
-                </tr>
-                <tr>
-                    <td>Bunda</td>
-                    <td>100</td>
-                    <td>1</td>
-                    <td>2</td>
-                </tr>
-                <tr>
-                    <td>Bunda</td>
-                    <td>100</td>
-                    <td>1</td>
-                    <td>2</td>
+                    <td>Example_torrent_file_name.file_extension</td>
+                    <td>1.2 GB</td>
+                    <td>8</td>
+                    <td>12</td>
                 </tr>
             </tbody>
         </table>
     </div>
 
+    <a
+        id="download-button"
+        class="btn-floating btn-large"
+    >
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z"/></svg>
+    </a>
+
     <script
         async
     >
+
+
+        /*
+        Github: https://github.com/ismailhabib/custom-protocol-detection
+        */
+        function _registerEvent(target, eventType, cb) {    if (target.addEventListener) {        target.addEventListener(eventType, cb);        return {            remove: function () {                target.removeEventListener(eventType, cb);            }        };    } else {        target.attachEvent(eventType, cb);        return {            remove: function () {                target.detachEvent(eventType, cb);            }        };    }}function _createHiddenIframe(target, uri) {    var iframe = document.createElement("iframe");    iframe.src = uri;    iframe.id = "hiddenIframe";    iframe.style.display = "none";    target.appendChild(iframe);    return iframe;}function openUriWithHiddenFrame(uri, failCb, successCb) {    var timeout = setTimeout(function () {        failCb();        handler.remove();    }, 1000);    var iframe = document.querySelector("#hiddenIframe");    if (!iframe) {        iframe = _createHiddenIframe(document.body, "about:blank");    }    var handler = _registerEvent(window, "blur", onBlur);    function onBlur() {        clearTimeout(timeout);        handler.remove();        successCb();    }    iframe.contentWindow.location.href = uri;}function openUriWithTimeoutHack(uri, failCb, successCb) {        var timeout = setTimeout(function () {        failCb();        handler.remove();    }, 1000);        var target = window;    while (target != target.parent) {        target = target.parent;    }    var handler = _registerEvent(target, "blur", onBlur);    function onBlur() {        clearTimeout(timeout);        handler.remove();        successCb();    }    window.location = uri;}function openUriUsingFirefox(uri, failCb, successCb) {    var iframe = document.querySelector("#hiddenIframe");    if (!iframe) {        iframe = _createHiddenIframe(document.body, "about:blank");    }    try {        iframe.contentWindow.location.href = uri;        successCb();    } catch (e) {        if (e.name == "NS_ERROR_UNKNOWN_PROTOCOL") {            failCb();        }    }}function openUriUsingIEInOlderWindows(uri, failCb, successCb) {    if (getInternetExplorerVersion() === 10) {        openUriUsingIE10InWindows7(uri, failCb, successCb);    } else if (getInternetExplorerVersion() === 9 || getInternetExplorerVersion() === 11) {        openUriWithHiddenFrame(uri, failCb, successCb);    } else {        openUriInNewWindowHack(uri, failCb, successCb);    }}function openUriUsingIE10InWindows7(uri, failCb, successCb) {    var timeout = setTimeout(failCb, 1000);    window.addEventListener("blur", function () {        clearTimeout(timeout);        successCb();    });    var iframe = document.querySelector("#hiddenIframe");    if (!iframe) {        iframe = _createHiddenIframe(document.body, "about:blank");    }    try {        iframe.contentWindow.location.href = uri;    } catch (e) {        failCb();        clearTimeout(timeout);    }}function openUriInNewWindowHack(uri, failCb, successCb) {    var myWindow = window.open('', '', 'width=0,height=0');    myWindow.document.write("<iframe src='" + uri + "'></iframe>");    setTimeout(function () {        try {            myWindow.location.href;            myWindow.setTimeout("window.close()", 1000);            successCb();        } catch (e) {            myWindow.close();            failCb();        }    }, 1000);}function openUriWithMsLaunchUri(uri, failCb, successCb) {    navigator.msLaunchUri(uri,        successCb,        failCb    );}function checkBrowser() {    var isOpera = !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;    var ua = navigator.userAgent.toLowerCase();    return {        isOpera   : isOpera,        isFirefox : typeof InstallTrigger !== 'undefined',        isSafari  : (~ua.indexOf('safari') && !~ua.indexOf('chrome')) || Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0,        isIOS     : /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream,        isChrome  : !!window.chrome && !isOpera,        isIE      : false || !!document.documentMode    }}function getInternetExplorerVersion() {    var rv = -1;    if (navigator.appName === "Microsoft Internet Explorer") {        var ua = navigator.userAgent;        var re = new RegExp("MSIE ([0-9]{1,}[.0-9]{0,})");        if (re.exec(ua) != null)            rv = parseFloat(RegExp.$1);    }    else if (navigator.appName === "Netscape") {        var ua = navigator.userAgent;        var re = new RegExp("Trident/.*rv:([0-9]{1,}[.0-9]{0,})");        if (re.exec(ua) != null) {            rv = parseFloat(RegExp.$1);        }    }    return rv;}window.protocolCheck = function(uri, failCb, successCb, unsupportedCb) {    function failCallback() {        failCb && failCb();    }    function successCallback() {        successCb && successCb();    }    if (navigator.msLaunchUri) {        openUriWithMsLaunchUri(uri, failCb, successCb);    } else {        var browser = checkBrowser();        if (browser.isFirefox) {            openUriUsingFirefox(uri, failCallback, successCallback);        } else if (browser.isChrome || browser.isIOS) {            openUriWithTimeoutHack(uri, failCallback, successCallback);        } else if (browser.isIE) {            openUriUsingIEInOlderWindows(uri, failCallback, successCallback);        } else if (browser.isSafari) {            openUriWithHiddenFrame(uri, failCallback, successCallback);        } else {            unsupportedCb();               }    }};
+        /*
+        API: window.protocolCheck(uri, failCb, successCb, unsupportedCb);
+        */
+
+        function createMagnetUrl(infoHash) {
+            const url = new URL("magnet:?");
+            url.searchParams.set("xt", `urn:btih:${infoHash}`);
+            for (const tracker of trackers) {
+                url.searchParams.append("tr", tracker);
+            };
+            return url.href;
+        };
+
+        function formatFileSize(bytes) {
+            const units = ["B", "KB", "MB", "GB", "TB"];
+
+            let unitIndex = 0;
+            let size = Number(bytes);
+
+            while (size >= 1024 && unitIndex < units.length - 1) {
+                size /= 1024;
+                unitIndex++;
+            }
+
+            const decimals = unitIndex === 0 ? 0 : 2;
+
+            return `${size.toFixed(decimals)} ${units[unitIndex]}`;
+        };
+
+        const trackers = [
+            "udp://tracker.opentrackr.org:1337/announce",
+            "udp://open.stealth.si:80/announce",
+            "udp://tracker.torrent.eu.org:451/announce",
+            "udp://open.demonii.com:1337/announce",
+            "udp://exodus.desync.com:6969/announce",
+            "udp://tracker.skynetcloud.site:6969/announce",
+            "udp://tracker.qu.ax:6969/announce",
+            "udp://tracker.tryhackx.org:6969/announce",
+            "udp://tracker.nyaa.vc:6969/announce",
+            "udp://tracker.corpscorp.online:80/announce",
+            "udp://tracker.bittor.pw:1337/announce",
+            "udp://tracker-udp.gbitt.info:80/announce",
+            "udp://explodie.org:6969/announce",
+            "udp://tracker.ducks.party:1984/announce",
+            "udp://retracker01-msk-virt.corbina.net:80/announce",
+            "http://tracker.dler.org:6969/announce",
+            "http://tracker.dler.com:6969/announce",
+            "udp://tracker2.dler.org:80/announce",
+            "udp://tracker.gmi.gd:6969/announce",
+            "http://tracker.renfei.net:8080/announce"
+        ];
+
+        function isValidTrackerUrl(trackerUrlStr) {
+            try {
+                const trackerURL = new URL(trackerUrlStr);
+                return (
+                    trackerURL.protocol == "https:" ||
+                    trackerURL.protocol == "http:" ||
+                    trackerURL.protocol == "udp:"
+                ) && trackerURL.pathname == "/announce";
+            } catch {
+                return false;
+            };
+        };
+
+        function openMagnetUrl(magnetUrl) {
+            window.protocolCheck(
+                magnetUrl,
+                // failure
+                function() {
+                    console.error("Failed to open the magnet link.");
+                    alert(
+                        "Could not open the magnet link.\n" +
+                        "Please make sure you have a BitTorrent client installed\n" +
+                        "and that it is configured to handle magnet links."
+                    );
+                },
+                // success
+                function() {
+                    console.log("Magnet link opened successfully.");
+                },
+                // unsupported browser
+                function() {
+                    console.warn("This browser does not support magnet-link detection.");
+                    alert("Your browser does not support automatic detection of magnet-link applications.");
+                }
+            );
+        };
+
+        async function getTrackers() {
+            try {
+                const trackerListUrl = "https://raw.githubusercontent.com/ngosang/trackerslist/master/trackers_best.txt";
+                const response = await fetch(
+                    trackerListUrl,
+                    {
+                        method: "GET"
+                    }
+                );
+                if (!response.ok) {
+                    console.error("Error: failed to get latest tracker list from ");
+                    return;
+                };
+                const result = await response.text();
+                lines = result.split('\n');
+                for (const line of lines) {
+                    if (isValidTrackerUrl(line) && !trackers.includes(line)) {
+                        trackers.push(line);
+                        console.log(`Successfully added tracker: '${line}'`);
+                    };
+                };
+            } catch (error) {
+                console.error(`Failed to get trackers list\nurl: '${trackerListUrl}'\nresponse.status: '${response.status}'`);
+            };
+        };
+
+        getTrackers();
+
+        // const selectedSearchResults = [];
 
         const searchBar = document.getElementById("search-bar");
         if (!searchBar) {
@@ -93,70 +252,71 @@
             throw new Error(errorMsg);
         };
 
-        const trackers = [];
+        /*
 
-        async function getTrackers() {
-            try {
-                const url = "https://raw.githubusercontent.com/ngosang/trackerslist/master/trackers_best.txt";
-                const response = await fetch(
-                    url
-                );
-                if (!response.ok) {
-                    console.error("Error: failed to get latest tracker list from ");
-                    return;
-                };
-                const result = await response.text();
-                lines = result.split('\n');
-                for (const line in lines) {
-                    if () {
-
-                    };
-                };
-            } catch (error) {
-                
-            }
+        const downloadButton = document.getElementById("download-button");
+        if (!downloadButton) {
+            const errorMsg = "Error: failed to find dowload button";
+            alert(errorMsg);
+            throw new Error(errorMsg);
         };
 
-        getTrackers();
+        downloadButton.addEventListener("click", () => {
+            if (selectedSearchResults.length <= 0) {
+                console.log("No torrents selected");
+                return;
+            };
+            const magnetUrl = createMagnetUrl(
+                selectedSearchResults[0].infoHash
+            );
+            openMagnetUrl(magnetUrl);
+
+        });
+        */
 
         let isSearching = false;
 
         searchBar.addEventListener("keydown", async (event) => {
             if (
                 event.key == "Enter" &&
-                trackers.length >= 1 &&
-                !isSearching
+                !isSearching &&
+                trackers.length >= 1
             ) {
                 isSearching = true;
-                console.log(`Pressed enter on: ${searchBar.id}`);
-                const allSearchResults = [];
-                const requests = [
-                    {
-                        url: `https://apibay.org/q.php?q=${query}`,
-                        options: {
-                            method: "GET",
-                            headers: {
+                const query = searchBar.value;
+                const searches = [
+                    // pirate bay search
+                    async function(query) {
+                        try {
+                            const url = `https://apibay.org/q.php?q=${query}`;
+                            const options = {
+                                "method": "GET",
                                 "Accept": "application/json"
-                            }
-                        },
-                        parseResponse: function(response) {
-                            const results = response.json();
-                            if (typeof results != "array") {
-                                console.error("Error: the pirate bay results was not an array");
+                            };
+                            const response = await fetch(url, options);
+                            if (!response.ok) {
+                                console.error(`Failed to get 'The Pirate Bay' search results\nurl: '${url}'\nresponse.status: '${response.status}'`);
+                                return [];
+                            };
+                            const results = await response.json();
+                            if (!Array.isArray(results)) {
+                                console.error(`Error: the pirate bay results was not an array\nresults: '${results}'`);
                                 return [];
                             };
                             const searchResults = [];
                             results.forEach((result) => {
                                 if (
+                                    result != null &&
+                                    typeof result == "object" &&
                                     typeof result?.name == "string" &&
                                     typeof result?.info_hash == "string" &&
                                     typeof result?.size == "string" &&
                                     typeof result?.leechers == "string" &&
-                                    typeof seeders?.seeders == "string"
+                                    typeof result?.seeders == "string"
                                 ) {
                                     searchResults.push({
                                         name: result.name,
-                                        magnetUrl: result.info_hash,
+                                        infoHash: result.info_hash,
                                         size: result.size,
                                         leechers: result.leechers,
                                         seeders: result.seeders
@@ -164,36 +324,56 @@
                                 };
                             });
                             return searchResults;
-                        }
+                        } catch (error) {
+                            console.error(`Failed to get 'The Pirate Bay' search results: ${error}`);
+                            return [];
+                        };
                     }
                 ];
-                const fetchPromises = requests.map((request) => {
-                    return fetch(
-                        request.url,
-                        request.options
-                    );
+                const searchPromises = searches.map((search) => {
+                    return search(query);
                 });
-                await Promise.all(fetchPromises);
-                for (let i = 0; i < requests.length; ++i) {
-                    request = requests[i];
-                    response = fetchPromises[i];
-                    if (!response.ok) {
-                        console.log(`Failed to fetch torrent search results\nurl: '${request.url}'\nresponse status: '${response.status}'`);
-                        continue;
-                    };
-                    const searchResults = request.parseResponse(response);
-                    allSearchResults.push(searchResults);
-                };
+                const allSearchResults = (await Promise.all(searchPromises)).flat(1);
                 resultsTableBody.replaceChildren();
                 allSearchResults.forEach((searchResult) => {
 
                     const row = resultsTableBody.insertRow();
 
+                    row.addEventListener("click", () => {
+                        openMagnetUrl(
+                            createMagnetUrl(searchResult.infoHash)
+                        );
+                        /*
+                        try {
+                            row.classList.toggle("selected");
+                            if (
+                                row.classList.contains("selected") &&
+                                !selectedSearchResults.includes(searchResult)
+                            ) {
+                                selectedSearchResults.length = 0;
+                                selectedSearchResults.push(searchResult);
+                            } else {
+                                const index = selectedSearchResults.indexOf(searchResult);
+                                if (index >= 0) {
+                                    selectedSearchResults.splice(index, 1);
+                                };
+                            };
+                        } catch(err) {
+                            console.error(`Failed to select search result in table:\n${err}`);
+                            row.classList.remove("selected");
+                            const index = selectedSearchResults.indexOf(searchResult);
+                            if (index >= 0) {
+                                selectedSearchResults.splice(index, 1);
+                            };
+                        };
+                        */
+                    });
+
                     const nameCell = row.insertCell();
                     nameCell.textContent = searchResult.name;
 
                     const sizeCell = row.insertCell();
-                    sizeCell.textContent = searchResult.size;
+                    sizeCell.textContent = formatFileSize(searchResult.size);
 
                     const seedersCell = row.insertCell();
                     seedersCell.textContent = searchResult.seeders;
